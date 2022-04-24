@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% set active_page = "twoforms" %}
+
+{% block title %}Two Forms{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+
+{% endblock %}
+
+{% block page_content %}
+<h1 class="cap">Two Forms</h1>
+{% if result %}
+<h2>{{result}} is added to database.</h2>
+{% endif %}
+<h3>Form 1: Add 2</h3>
+<form action="/form1" method="post">
+    <input type="text" name="name" value="" required />
+    <input type="submit">
+</form>
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+
+
+{% endblock %}
